@@ -43,15 +43,13 @@ public class Login extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Login() {
 		Database cursor = new Database();
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1280, 900);
 		setLocationRelativeTo(null);
+		
 		LoginPage = new JPanel();
 		LoginPage.setBackground(Color.GRAY);
 		LoginPage.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -73,13 +71,13 @@ public class Login extends JFrame {
 		JButton LoginButton = new JButton("Login");
 		
 		
-		continuetologin.setIcon(new ImageIcon("/home/berting/Pictures/Screenshots/Screenshot from 2025-12-03 14-55-50.png"));
+		continuetologin.setIcon(new ImageIcon("/home/berting/eclipse-workspaceitj/Hotel_Reservation/continuetologin.png"));
 		continuetologin.setFont(new Font("Dialog", Font.BOLD, 20));
 		continuetologin.setSize(new Dimension(20, 0));
 		continuetologin.setBounds(353, 257, 341, 114);
 		
 		
-		lblLuxestay.setIcon(new ImageIcon("/home/berting/Pictures/Screenshots/Screenshot from 2025-12-03 00-01-36.png"));
+		lblLuxestay.setIcon(new ImageIcon("/home/berting/eclipse-workspaceitj/Hotel_Reservation/luxestay.png"));
 		lblLuxestay.setBounds(203, 23, 711, 320);
 		
 		
@@ -100,7 +98,7 @@ public class Login extends JFrame {
 					setVisible(false);
 				}
 				else {
-					JOptionPane.showMessageDialog(getParent(),"Please check you inputs and try again");
+					JOptionPane.showMessageDialog(getParent(),"Please check your inputs and try again");
 				}
 			}
 		});
@@ -115,7 +113,7 @@ public class Login extends JFrame {
 				String password = txtPassword.getText().toString();
 				boolean LoginAdminExist = cursor.LoginAdmin(email,password);
 				if(LoginAdminExist) {
-					JOptionPane.showMessageDialog(getParent(), "You Enter correct inputs");
+					JOptionPane.showMessageDialog(getParent(), "Login Success");
 					Main_page frame = new Main_page();
 					frame.setVisible(true);
 					setVisible(false);
