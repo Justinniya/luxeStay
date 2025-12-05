@@ -578,6 +578,11 @@ public class Main_page extends JFrame {
 		
 		Payment.add(Firstname_Label_9_1_1);
 		
+		JLabel lblAmount = new JLabel("Amount");
+		lblAmount.setFont(new Font("Dialog", Font.BOLD, 20));
+		lblAmount.setBounds(312, 724, 125, 17);
+		Payment.add(lblAmount);
+		
 		
 		reservation.setLayout(null);
 		MainPanel.addTab("New tab", null, reservation, null);
